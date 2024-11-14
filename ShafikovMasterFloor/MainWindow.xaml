@@ -1,0 +1,21 @@
+﻿<Window x:Class="ShafikovMasterFloor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShafikovMasterFloor"
+        mc:Ignorable="d"
+        Title="MasterFloor" MinHeight="450" MinWidth="900" FontFamily="Segoe UI" Icon="Pictures\Мастер пол.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#F4E8D3"/>
+        <Image Source="Pictures\Мастер пол.png" Grid.Row="0" HorizontalAlignment="Left" Margin="5"/>
+        <Button Name="BackButton" Grid.Row="0" Content="Назад" Click="BackButton_Click" HorizontalAlignment="Right"></Button>
+        <TextBlock Text="Мастер пол" HorizontalAlignment="Center" FontSize="32" VerticalAlignment="Center"/>
+        <Frame Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+    </Grid>
+</Window>

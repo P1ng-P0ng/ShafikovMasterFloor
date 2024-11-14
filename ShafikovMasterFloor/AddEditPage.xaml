@@ -1,0 +1,84 @@
+﻿<Page x:Class="ShafikovMasterFloor.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ShafikovMasterFloor"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="900"
+      Title="AddEditPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Название компании " FontSize="24" Margin="5"/>
+            <TextBox Name="CompanyNameTBox" Text="{Binding PartnerCompanyName}" FontSize="24" Width="350" Height="35" Margin="5"/>
+        </StackPanel>
+        <TextBlock Text="Фамилия" FontSize="24" Margin="5" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="SurNameTBox" Text="{Binding PartnerDirSurame}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        
+        <TextBlock Text="Имя" FontSize="24" Margin="5" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="NameTBox" Text="{Binding PartnerDirName}" Width="250" Height="35" FontSize="24" Margin="5" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        
+        <TextBlock Text="Отчество" FontSize="24" Margin="5" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="PatronymicTBox" Text="{Binding PartnerDirPatronymic}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Телефон" FontSize="24" Margin="5" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="PhoneTBox" Text="{Binding PartnerPhone}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        
+        <TextBlock Text="Email" FontSize="24" Margin="5" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="EmailTBox" Text="{Binding PartnerEmail}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Рейтинг" FontSize="24" Margin="5" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="RatingTBox" Text="{Binding PartnerRating}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="ИНН" FontSize="24" Margin="5" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="InnTBox" Text="{Binding PartnerINN}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+
+        <TextBlock Text="Тип" FontSize="24" Margin="5" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox Name="ComboType" Width="250" Height="35" FontSize="24" Margin="5" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left"
+                  SelectedIndex="{Binding CompanyTypeID}">
+            <TextBlock Text=""/>
+            <TextBlock Text="ЗАО"/>
+            <TextBlock Text="ОАО"/>
+            <TextBlock Text="ООО"/>
+            <TextBlock Text="ПАО"/>
+        </ComboBox>
+                  
+        
+        <TextBlock Text="Индекс" FontSize="24" Margin="5" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="IndexTBox" Text="{Binding PartnerIndex}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Регион" FontSize="24" Margin="5" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="RegionTBox" Text="{Binding PartnerRegion}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Город" FontSize="24" Margin="5" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="CityTBox" Text="{Binding PartnerCity}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Улица" FontSize="24" Margin="5" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="StreetTBox" Text="{Binding PartnerStreet}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Дом" FontSize="24" Margin="5" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="HouseTBox" Text="{Binding ParnterBuildNumber}" FontSize="24" Width="250" Height="35" Margin="5" Grid.Row="6" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+        <Button Name="SaveBtn" Content="Сохранить" Grid.Row="8" Grid.Column="1" Click="SaveBtn_Click"/>
+        <Button Name="DelBtn" Content="Удалить" Grid.Row="8" Grid.Column="3" Click="DelBtn_Click" Visibility="Hidden"/>
+    </Grid>
+</Page>
